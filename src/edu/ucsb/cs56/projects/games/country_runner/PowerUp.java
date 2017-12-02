@@ -32,7 +32,7 @@ public class powerUp extends Obstacle
     public powerUp(int difficulty)
     {
      //x&y dimensions, sheet name are placeholders, will add sheet later
-	    super(50, 50, -100, "invincibleSheet");
+	super(50, 50, -100, "invincibleSheet");
         this.setY(GROUND - 280); //to be tested once spritesheet is uploaded
         switch (difficulty)
         {
