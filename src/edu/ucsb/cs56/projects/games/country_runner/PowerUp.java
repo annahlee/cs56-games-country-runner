@@ -19,10 +19,9 @@ public class powerUp extends Obstacle
     //the speed of powerUp object 
     private static final double speed = 10.0;
     //the amount of time that powerUp is in effect
-    private static final int powerUpInterval = 1000;
+    private static final double powerUpInterval = 1000;
     //holds the start time of the powerUp
-    private static int startTime = 0; 
-    
+    private static double startTime = 0; 
     
     /** Default Constructor makes a powerUp object.
      * sets up the spriteSheet and fills the
@@ -54,7 +53,6 @@ public class powerUp extends Obstacle
         counter = randomWithRange(occurance, occurance + 100);
         score = 0;
     }
-
     /** public boolean powerUpOver()
      * determines if you can die based on 
      * the last powerUp that was obtained and the powerUpInterval
@@ -64,18 +62,9 @@ public class powerUp extends Obstacle
 	    if((int)System.currentTimeMillis() - startTime > powerUpInterval)
 	        return true;
 	    return false;
-    }
-    
-    /** getScore 
-     *  returns 0. Probably shouldn't. lol
-     */
-    public int getScore()
-    {
-	    return 0;
-    }
-    
+    }   
     /** updateCurrentPosition
-     * Moves the bullet to left until it is off screen.
+     * Moves the object to right until it is off screen.
      */
     public void updateCurrentPosition()
     {
@@ -93,5 +82,12 @@ public class powerUp extends Obstacle
 	    if((int)this.getX() > 0 || xPosition > 0)
 	        return true;
 	    return false;
+    }
+    /** getScore 
+     *  returns 0. Probably shouldn't. lol
+     */
+    public int getScore()
+    {
+	    return 0;
     }
 }
